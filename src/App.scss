@@ -1,0 +1,109 @@
+$app-background-color: rgba(247,181,47,0.6);
+$app-background-color-form:#e6e6e6;
+$five: 5px;
+
+%input-props{
+    padding: 5px;
+    margin: $five;
+    border-radius: 4px;  
+}
+%input-form {
+    display: flex;
+    flex-wrap: wrap;
+    background: $app-background-color-form;
+    border-radius: 8px;
+    box-shadow:0 0 40px -10px #000;
+    margin:calc(30vh - 220px) auto;
+    padding: 20px 30px;
+    max-width:calc(100vw - 40px);
+    box-sizing: border-box;
+    font-family:'Montserrat',sans-serif;
+    position: relative;
+  }
+
+  %flex-basis{
+    flex-basis: 100%
+  }
+  
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: $app-background-color;
+  }
+  
+  .App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .btn-rounded {
+    border-radius: 19px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 3px;
+  }
+  
+  .form, .form2{
+    width:340px;
+    @extend %input-form;
+    }
+  
+  .integ{
+    @extend %flex-basis;
+      height:40px;
+      border-radius:4px;
+      }
+    
+  .one{
+    @extend %flex-basis;
+   }
+  textarea{
+      @extend %input-props;
+      @extend %flex-basis;
+      overflow: scroll;
+      resize: none;
+    }
+  
+  li {
+      list-style-type: none; /* Убираем маркеры */
+     }
+     
+  p{
+      font-style: italic;
+      font-weight: bold;
+     }
